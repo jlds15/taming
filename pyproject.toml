@@ -3,7 +3,7 @@ name = "taming"
 version = "0.1.0"
 description = "Taming Transformers for High-Resolution Image Synthesis"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.11"
 dependencies = [
   "einops==0.3.0",
   "numpy<2.0",
