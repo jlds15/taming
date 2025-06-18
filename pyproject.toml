@@ -1,0 +1,30 @@
+[project]
+name = "taming"
+version = "0.1.0"
+description = "Taming Transformers for High-Resolution Image Synthesis"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "einops==0.3.0",
+  "numpy<2.0",
+  "omegaconf>=2",
+  "opencv-python>=4.11.0.86",
+  "pytorch-lightning<2",
+  "torch==1.13.1",
+  "torchvision==0.14.1",
+  "tqdm",
+  "transformers<4.39",        # https://github.com/huggingface/transformers/pull/29492
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu116" }
+torchvision = { index = "pytorch-cu116" }
+
+[[tool.uv.index]]
+name = "pytorch-cu116"
+url = "https://download.pytorch.org/whl/cu116"
+explicit = true
